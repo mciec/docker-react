@@ -1,0 +1,7 @@
+POST /token HTTP/1.1
+Host: oauth2.googleapis.com
+Content-length: 261
+content-type: application/x-www-form-urlencoded
+user-agent: google-oauth-playground
+
+code=4%2F0ARtbsJo4xHXJEM7G3d5gI2wRhY9Tju1CchmLoFIiPeXP0bTYyAPPjS4kw-Te6kxwWUwAPw&redirect_uri=https%3A%2F%2Fdevelopers.google.com%2Foauthplayground&client_id=407408718192.apps.googleusercontent.com&client_secret=************&scope=&grant_type=authorization_code

@@ -24,13 +24,13 @@ app.UseCors(x => x
     .AllowAnyMethod()
     .WithOrigins("*"));
 
-// app.UseHttpsRedirection();
-app.UseStaticFiles(
-    new StaticFileOptions {
-        FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(path),
-        RequestPath = ""
-    }
-);
+app.UseHttpsRedirection();
+// app.UseStaticFiles(
+//     new StaticFileOptions {
+//         FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(path),
+//         RequestPath = ""
+//     }
+// );
 
 app.UseRouting();
 app.MapControllerRoute(

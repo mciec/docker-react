@@ -2,7 +2,7 @@ import React from 'react'
 
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import { LazyLoginPage, LazyCounterButtonPage, LoadingPage, LazyHomePage, LazyProtectedPage, LazyControlledFormPage } from './pages'
+import { LazyLoginPage, LazyCounterButtonPage, LoadingPage, LazyHomePage, LazyProtectedPage, LazyControlledFormPage, LazyShowYtSubscriptionsPage } from './pages'
 import { SiteMap } from './components/SiteMap'
 import { ThemeProvider } from './contextes/ThemeContext'
 
@@ -18,6 +18,7 @@ export const App = (): JSX.Element => {
             <Route path="/counterbutton/:myparam1" element={<LazyCounterButtonPage />}></Route>
             <Route path="/protected" element={<LazyProtectedPage />}></Route>
             <Route path="/controlledform" element={<LazyControlledFormPage />}></Route>
+            <Route path="/showytsubscriptions" element={<LazyShowYtSubscriptionsPage />}></Route>
 
           </Routes>
         </React.Suspense>

@@ -20,6 +20,13 @@ const CounterButtonPage = (): JSX.Element => {
     stateDispatch({ type: 'decr' })
   }
 
+  const getYoutubeSubstriptions = (): void => {
+    const redirectUri = `${window.location.origin}/showytsubscriptions`
+    const clientId = '706648688117-cpbim3nba1rke57nvuev0ch2il0qle9m.apps.googleusercontent.com'
+    const path = `https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=${redirectUri}&prompt=consent&response_type=code&client_id=${clientId}&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyoutube&access_type=offline`
+    window.location.replace(path)
+  }
+
   console.log(location)
   return (
     <>
@@ -33,7 +40,9 @@ const CounterButtonPage = (): JSX.Element => {
       <p>{state.count}</p>
       <button type='button' name='decr' onClick={decrement} > Decrement</button>
       <button type='button' name='incr' onClick={increment} > Increment</button>
-
+      <div>
+        <button type='button' name='getYoutubeSubscriptions' onClick={getYoutubeSubstriptions} > getYoutubeSubscriptions</button>
+      </div>
     </>
   )
 }
